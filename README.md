@@ -62,5 +62,9 @@ buttons now bring up that cities data. new searches get prepended to the top of 
 ### Commit 17: Clear Search
 search input field now clears after the search
 
+### Commit 18: UVI
+the color of the UVI now changes in relation to the linked safety scale!
+
 ## credits
 https://getbootstrap.com/docs/5.0
+https://www.epa.gov/sunsafety/uv-index-scale-0

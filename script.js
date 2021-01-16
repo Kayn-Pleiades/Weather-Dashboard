@@ -85,7 +85,7 @@ function coord(lat,lon){
         $("#currentTemp").text("Temperature:   " + response.current.temp + " °F");
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");
         $("#windSpeed").text("Wind Speed:   " + response.current.wind_speed + " MPH");
-        $("#UVIndex").text("UV Index:   " + response.current.uvi);
+        $("#UVIndex").html(`UV Index:  <span class="rounded-pill">${response.current.uvi}</span>`);
         $("#currentWeather").find("img").attr("src", `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@2x.png`);
 
         for ( i = 0; i < 5; i++) {
@@ -100,7 +100,31 @@ function coord(lat,lon){
             `;
             key.html(code);
         }
+        var uvi = response.current.uvi;
+        uviRating(uvi)
     });
 }
 
-
+// Change uvi class based on the value
+function uviRating(uvi) {
+    if (uvi < 3) {
+        $("#UVIndex").find("span").removeClass("orange purple red yellow");
+        $("#UVIndex").find("span").addClass("green");
+    }
+    else if (uvi < 6) {
+        $("#UVIndex").find("span").removeClass("green orange purple red");
+        $("#UVIndex").find("span").addClass("yellow");
+    }
+    else if (uvi < 8) {
+        $("#UVIndex").find("span").removeClass("green purple red yellow");
+        $("#UVIndex").find("span").addClass("orange");
+    }
+    else if (uvi < 11) {
+        $("#UVIndex").find("span").removeClass("green orange purple yellow");
+        $("#UVIndex").find("span").addClass("red");
+    }
+    else {
+        $("#UVIndex").find("span").removeClass("green orange red yellow");
+        $("#UVIndex").find("span").addClass("purple");
+    }
+}
