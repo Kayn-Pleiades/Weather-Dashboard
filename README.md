@@ -35,5 +35,8 @@ The app now prints the current weather details except for uvi. It looks like you
 ### Commit 8: Switched to Onecall
 Learned I can get uvi through onecall, so I get the lat and lon from the first pull and then pull using one call. updated all values to reflect this.
 
+### Commit 9: Map forecast
+I am now able to map the next 5 days to cards. Currently it just maps the day temp, as I just wanted to make sure everything is going to the right place. 
+
 ## credits
 https://getbootstrap.com/docs/5.0

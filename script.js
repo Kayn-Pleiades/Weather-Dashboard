@@ -1,3 +1,6 @@
+// Search Storage
+var history = [];
+
 // When you click the button
 $("button").on("click", function(event) {
     event.preventDefault();
@@ -5,7 +8,7 @@ $("button").on("click", function(event) {
     searchCity(cityName);
 })
 
-//get coord
+// Get coord
 function searchCity(city){
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=6eb547b4603918a42c0a7cd6ff63bc26&units=imperial";
     $.ajax({
@@ -31,6 +34,14 @@ function coord(lat,lon){
         $("#currentTemp").text("Temperature:   " + response.current.temp + " °F");
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");
         $("#windSpeed").text("Wind Speed:   " + response.current.wind_speed + " MPH");
-        $("#UVIndex").text("UV Index:   " + response.current.uvi );
+        $("#UVIndex").text("UV Index:   " + response.current.uvi);
+
+        for ( i = 0; i < 5; i++) {
+            console.log(response.daily[i].temp.day);
+            var key = $("#" + i);
+            key.find("h1").text(response.daily[i].temp.day);
+        }
     });
 }
+
+
