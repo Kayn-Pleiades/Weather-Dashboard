@@ -44,5 +44,8 @@ Except for the dates, all of the values for the forecasts are now active. I've a
 ### Commit 11: Push to array
 Searched cities are now pushed to the array.
 
+### Commit 12: Local Storage and preventing duplicates
+All searched cities are added to local storage and pulled on a refresh. If the city is already in the array, it will not be re-added. Later I will find a way to instead put it as the most recent item in the array (removing it then re-adding it?)
+
 ## credits
 https://getbootstrap.com/docs/5.0

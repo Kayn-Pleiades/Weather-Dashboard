@@ -1,13 +1,36 @@
 // Search Storage
 var searchHistory = [];
 
+init();
+
+// Get stored values
+function init() {
+    var storedSearches = JSON.parse(localStorage.getItem("searchHistory"));
+    if (storedSearches !== null) {
+        searchHistory = storedSearches;
+        console.log(searchHistory);
+    }
+}
+
+// Save Search History
+function saveSearches () {
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+}
+
 // When you click the button
 $("button").on("click", function(event) {
     event.preventDefault();
     var cityName = $("input").val().trim();
-    searchHistory.push(cityName);
-    console.log(searchHistory);
     searchCity(cityName);
+    var city = searchHistory.includes(`${cityName}`);
+    if (city === false) {
+        console.log("new city");
+        searchHistory.push(cityName);
+        saveSearches();
+    }
+    else {
+        console.log("this city has been searched before");
+    }
 })
 
 // Get coord
