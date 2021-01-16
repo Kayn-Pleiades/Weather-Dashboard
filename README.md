@@ -1,4 +1,4 @@
-# Weather-Dashbord
+# Weather-Dashboard
 
 
 ## Table of Contents
@@ -17,4 +17,8 @@ Created repository on GitHub
 ### Commit 2: Index
 Added base html file for the project. 
 
+### Commit 3: Page Blocking
+Blocked out the sections for the webpage. 
+
 ## credits
+https://getbootstrap.com/docs/5.0
