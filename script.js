@@ -34,7 +34,7 @@ function renderHistory() {
 // When you click the past searched places
 $("ul").find("button").on("click", function() {
     var city = $(this).text();
-    console.log(city);
+    searchCity(city);
 })
 
 // When you click the button to search
@@ -47,6 +47,12 @@ $("form").find("button").on("click", function(event) {
         console.log("new city");
         searchHistory.push(cityName);
         saveSearches();
+        var code = `
+            <li> 
+                <button type="submit" class="btn"> ${cityName} </button>
+            </li>
+        `;
+        $("ul").prepend(code);
     }
     else {
         console.log("this city has been searched before");

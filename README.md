@@ -56,5 +56,8 @@ Made the script relating to the search apply to only that button so that it does
 ### Commit 15: Button sends City
 clicking a past search button sends the name of the city to the console. I will now have it use that value to pull up the city's weather value
 
+### Commit 16: Buttons 
+buttons now bring up that cities data. new searches get prepended to the top of the list.
+
 ## credits
 https://getbootstrap.com/docs/5.0
