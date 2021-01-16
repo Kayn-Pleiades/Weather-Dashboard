@@ -10,11 +10,23 @@ function init() {
         searchHistory = storedSearches;
         console.log(searchHistory);
     }
+    renderHistory();
 }
 
 // Save Search History
-function saveSearches () {
+function saveSearches() {
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+}
+
+// Render past searches
+function renderHistory() {
+    for (i = 0; i < searchHistory.length; i++) {
+        var search = searchHistory[i];
+        var code = `
+            <li> ${search} </li>
+        `;
+        $("ul").append(code);
+    }
 }
 
 // When you click the button
@@ -70,7 +82,7 @@ function coord(lat,lon){
                     <p>Temperature:   ${response.daily[i].temp.day} °F</p>
                     <p>Humidity:   ${response.daily[i].humidity}</p>
                 </div>
-            `
+            `;
             key.html(code);
         }
     });
