@@ -32,5 +32,8 @@ Referencing the activities from class, I now have the code printing the weather 
 ### Commit 7: Print current weather
 The app now prints the current weather details except for uvi. It looks like you need to pay for uvi info?? I will ask in class.
 
+### Commit 8: Switched to Onecall
+Learned I can get uvi through onecall, so I get the lat and lon from the first pull and then pull using one call. updated all values to reflect this.
+
 ## credits
 https://getbootstrap.com/docs/5.0
