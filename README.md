@@ -23,5 +23,8 @@ Blocked out the sections for the webpage.
 ### Commit 4: Search Bar Layout
 Set up the format for the search bar section.
 
+### Commit 5: Click to search
+Started with the js and css. Have it so the term in the input is logged to the console to check that the input is working.
+
 ## credits
 https://getbootstrap.com/docs/5.0
