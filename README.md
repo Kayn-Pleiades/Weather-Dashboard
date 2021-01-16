@@ -29,5 +29,8 @@ Started with the js and css. Have it so the term in the input is logged to the c
 ### Commit 6: Fetch weather data
 Referencing the activities from class, I now have the code printing the weather data of the searched town to the console.
 
+### Commit 7: Print current weather
+The app now prints the current weather details except for uvi. It looks like you need to pay for uvi info?? I will ask in class.
+
 ## credits
 https://getbootstrap.com/docs/5.0
