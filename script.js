@@ -1,10 +1,12 @@
 // Search Storage
-var history = [];
+var searchHistory = [];
 
 // When you click the button
 $("button").on("click", function(event) {
     event.preventDefault();
     var cityName = $("input").val().trim();
+    searchHistory.push(cityName);
+    console.log(searchHistory);
     searchCity(cityName);
 })
 
@@ -29,7 +31,6 @@ function coord(lat,lon){
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        console.log(response);
 
         $("#currentTemp").text("Temperature:   " + response.current.temp + " °F");
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");

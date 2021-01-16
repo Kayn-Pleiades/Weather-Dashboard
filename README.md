@@ -41,5 +41,8 @@ I am now able to map the next 5 days to cards. Currently it just maps the day te
 ### Commit 10: Forecast implimented
 Except for the dates, all of the values for the forecasts are now active. I've also added the weather image to the current weather too. 
 
+### Commit 11: Push to array
+Searched cities are now pushed to the array.
+
 ## credits
 https://getbootstrap.com/docs/5.0
