@@ -38,5 +38,8 @@ Learned I can get uvi through onecall, so I get the lat and lon from the first p
 ### Commit 9: Map forecast
 I am now able to map the next 5 days to cards. Currently it just maps the day temp, as I just wanted to make sure everything is going to the right place. 
 
+### Commit 10: Forecast implimented
+Except for the dates, all of the values for the forecasts are now active. I've also added the weather image to the current weather too. 
+
 ## credits
 https://getbootstrap.com/docs/5.0

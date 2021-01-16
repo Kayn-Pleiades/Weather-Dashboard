@@ -35,11 +35,19 @@ function coord(lat,lon){
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");
         $("#windSpeed").text("Wind Speed:   " + response.current.wind_speed + " MPH");
         $("#UVIndex").text("UV Index:   " + response.current.uvi);
+        $("#currentWeather").find("img").attr("src", `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@2x.png`);
 
         for ( i = 0; i < 5; i++) {
-            console.log(response.daily[i].temp.day);
             var key = $("#" + i);
-            key.find("h1").text(response.daily[i].temp.day);
+            var code = `
+                <div class="card">
+                    <h1></h1>
+                    <img src="http://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@2x.png">
+                    <p>Temperature:   ${response.daily[i].temp.day} °F</p>
+                    <p>Humidity:   ${response.daily[i].humidity}</p>
+                </div>
+            `
+            key.html(code);
         }
     });
 }
