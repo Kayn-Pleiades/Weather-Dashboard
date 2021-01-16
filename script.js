@@ -25,12 +25,12 @@ function renderHistory() {
         var code = `
             <li> ${search} </li>
         `;
-        $("ul").append(code);
+        $("ul").prepend(code);
     }
 }
 
 // When you click the button
-$("button").on("click", function(event) {
+$("form").find("button").on("click", function(event) {
     event.preventDefault();
     var cityName = $("input").val().trim();
     searchCity(cityName);

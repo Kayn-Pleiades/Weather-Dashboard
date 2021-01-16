@@ -50,5 +50,8 @@ All searched cities are added to local storage and pulled on a refresh. If the c
 ### Commit 13: Append search history
 The stored searches are now listed under the search bar. Next will be to make them into buttons that pull up their data when clicked.
 
+### Commit 14: Specified Button and changed to Prepend
+Made the script relating to the search apply to only that button so that it doesn't get messed up I turn the history into buttons. switched from append to prepend so the most recent city is on top. 
+
 ## credits
 https://getbootstrap.com/docs/5.0
