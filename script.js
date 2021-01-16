@@ -23,13 +23,21 @@ function renderHistory() {
     for (i = 0; i < searchHistory.length; i++) {
         var search = searchHistory[i];
         var code = `
-            <li> ${search} </li>
+            <li> 
+                <button type="submit" class="btn"> ${search} </button>
+            </li>
         `;
         $("ul").prepend(code);
     }
 }
 
-// When you click the button
+// When you click the past searched places
+$("ul").find("button").on("click", function() {
+    var city = $(this).text();
+    console.log(city);
+})
+
+// When you click the button to search
 $("form").find("button").on("click", function(event) {
     event.preventDefault();
     var cityName = $("input").val().trim();

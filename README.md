@@ -53,5 +53,8 @@ The stored searches are now listed under the search bar. Next will be to make th
 ### Commit 14: Specified Button and changed to Prepend
 Made the script relating to the search apply to only that button so that it doesn't get messed up I turn the history into buttons. switched from append to prepend so the most recent city is on top. 
 
+### Commit 15: Button sends City
+clicking a past search button sends the name of the city to the console. I will now have it use that value to pull up the city's weather value
+
 ## credits
 https://getbootstrap.com/docs/5.0
