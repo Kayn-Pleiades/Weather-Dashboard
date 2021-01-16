@@ -43,6 +43,7 @@ $("form").find("button").on("click", function(event) {
     var cityName = $("input").val().trim();
     searchCity(cityName);
     var city = searchHistory.includes(`${cityName}`);
+    $("input").val("");
     if (city === false) {
         console.log("new city");
         searchHistory.push(cityName);

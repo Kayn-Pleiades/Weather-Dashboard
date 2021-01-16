@@ -59,5 +59,8 @@ clicking a past search button sends the name of the city to the console. I will 
 ### Commit 16: Buttons 
 buttons now bring up that cities data. new searches get prepended to the top of the list.
 
+### Commit 17: Clear Search
+search input field now clears after the search
+
 ## credits
 https://getbootstrap.com/docs/5.0
