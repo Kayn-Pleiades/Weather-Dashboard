@@ -68,6 +68,9 @@ the color of the UVI now changes in relation to the linked safety scale!
 ### Commit 19: Most recent
 logs the most recently searched city to the console so I can next have it auto fill the dashboard.
 
+### Commit 20: Auto populate
+The most recent search autofills the page. This is currently the most recent new city, but I'll be working to fix this next.
+
 ## credits
 https://getbootstrap.com/docs/5.0
 https://www.epa.gov/sunsafety/uv-index-scale-0

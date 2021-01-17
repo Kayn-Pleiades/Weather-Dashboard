@@ -12,7 +12,7 @@ function init() {
     }
     renderHistory();
     var last = searchHistory[searchHistory.length - 1];
-    console.log(last);
+    searchCity(last);
 }
 
 // Save Search History
