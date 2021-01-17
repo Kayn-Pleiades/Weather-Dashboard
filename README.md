@@ -10,6 +10,8 @@ Project is deployed here: https://kayn-pleiades.github.io/Weather-Dashboard/
 
 ## description 
 
+![screenshot of the webpage](https://github.com/Kayn-Pleiades/Weather-Dashboard/blob/main/assets/Capture.PNG)
+
 This webpage allows you to check both the future and current weather of cities around the world! Past searches are stored so that you can easily access them when needed. The UV index also changes color in regards to the danger presented by UV rays. Hopefully it will keep you from forgetting your sunscreen!
 
 ## process
@@ -85,6 +87,9 @@ Forecast dates now also display! With this, all needed functionality is present.
 
 ### Commit 24: Decorating
 made everything look much more cute!
+
+### Commit 25: Final
+Added the screenshot!
 
 ## credits
 https://getbootstrap.com/docs/5.0
