@@ -11,6 +11,8 @@ function init() {
         console.log(searchHistory);
     }
     renderHistory();
+    var last = searchHistory[searchHistory.length - 1];
+    console.log(last);
 }
 
 // Save Search History
@@ -32,7 +34,8 @@ function renderHistory() {
 }
 
 // When you click the past searched places
-$("ul").find("button").on("click", function() {
+$("ul").find("button").on("click", function(event) {
+    event.preventDefault();
     var city = $(this).text();
     searchCity(city);
 })
