@@ -74,6 +74,12 @@ The most recent search autofills the page. This is currently the most recent new
 ### Commit 21: Reorder
 Now when you click a past search or re-search an existing value, it moves that city to the front of the array.
 
+### Commit 22: Current Date
+Current date displays, accounting for time difference (aka if it's evening here and we search tokyo, the date will show tomorrow, as it is tomorrow there). This is how all weather apps I've used have handled timezones.
+
 ## credits
 https://getbootstrap.com/docs/5.0
 https://www.epa.gov/sunsafety/uv-index-scale-0
+https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
+https://stackoverflow.com/questions/11591854/format-date-to-mm-dd-yyyy-in-javascript
+https://openweathermap.org/

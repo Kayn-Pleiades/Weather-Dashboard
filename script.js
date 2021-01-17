@@ -54,12 +54,7 @@ $("form").find("button").on("click", function(event) {
     if (city === false) {
         searchHistory.push(cityName);
         saveSearches();
-        var code = `
-            <li> 
-                <button type="submit" class="btn"> ${cityName} </button>
-            </li>
-        `;
-        $("ul").prepend(code);
+        location.reload();
     }
     else {
         var term = cityName.toString();
@@ -91,6 +86,16 @@ function coord(lat,lon){
         method: "GET"
       }).then(function(response) {
 
+        console.log(response);
+
+        var offset = response.timezone_offset;
+        var accounted = response.current.dt + offset
+        var d = new Date(accounted * 1000);
+        var month = d.getMonth() + 1; 
+        var day = d.getDate();      
+        var year = d.getFullYear();
+
+        $("#date").text(month + "/" + day + "/" + year);
         $("#currentTemp").text("Temperature:   " + response.current.temp + " °F");
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");
         $("#windSpeed").text("Wind Speed:   " + response.current.wind_speed + " MPH");
