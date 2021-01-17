@@ -71,6 +71,9 @@ logs the most recently searched city to the console so I can next have it auto f
 ### Commit 20: Auto populate
 The most recent search autofills the page. This is currently the most recent new city, but I'll be working to fix this next.
 
+### Commit 21: Reorder
+Now when you click a past search or re-search an existing value, it moves that city to the front of the array.
+
 ## credits
 https://getbootstrap.com/docs/5.0
 https://www.epa.gov/sunsafety/uv-index-scale-0

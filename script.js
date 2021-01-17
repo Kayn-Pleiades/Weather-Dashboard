@@ -36,8 +36,12 @@ function renderHistory() {
 // When you click the past searched places
 $("ul").find("button").on("click", function(event) {
     event.preventDefault();
-    var city = $(this).text();
+    var city = $(this).text().trim();
     searchCity(city);
+    var term = city.toString();
+    searchHistory.push(searchHistory.splice(searchHistory.indexOf(term), 1)[0]);
+    saveSearches();
+    location.reload();
 })
 
 // When you click the button to search
@@ -48,7 +52,6 @@ $("form").find("button").on("click", function(event) {
     var city = searchHistory.includes(`${cityName}`);
     $("input").val("");
     if (city === false) {
-        console.log("new city");
         searchHistory.push(cityName);
         saveSearches();
         var code = `
@@ -59,7 +62,10 @@ $("form").find("button").on("click", function(event) {
         $("ul").prepend(code);
     }
     else {
-        console.log("this city has been searched before");
+        var term = cityName.toString();
+        searchHistory.push(searchHistory.splice(searchHistory.indexOf(term), 1)[0]);
+        saveSearches();
+        location.reload();
     }
 })
 
