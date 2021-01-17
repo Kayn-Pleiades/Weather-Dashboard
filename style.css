@@ -1,10 +1,68 @@
-input {
-    width: 70%;
+body {
+    background-color: #FDF6F1;
+}
+.card {
+    background-color: #e5ffe4;
+}
+.cities {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #f7ffe4;
+    font-family: 'Fredoka One', cursive;
+    color:  #b4b1ff;
+    text-shadow: 1px 1px 3px #e5ffe4;
+}
+.currentTitle {
+    text-align: center;
+}
+.currentWeather {
+    background-color: #e4fffe;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 .green {
     background-color: green;
     color: white;
 }
+input {
+    width: 70%;
+}
+main {
+    padding-top: 20px;
+}
+.navbar {
+    background-color: #f9e4ff;
+}
+.navbar::after { 
+    position:absolute;
+    bottom: -49px;
+    left: 0px;
+    width: 100%;
+    content:" ";
+    background: 
+    radial-gradient(circle at 50% 0%, #f9e4ff 25%, #f9e4ff 26%, transparent 0%);
+    background-color: transparent;
+    background-size:20px 40px;  
+    height:50px;
+    background-repeat: repeat-x;
+    background-position: -25px 0px;
+  }
+.navbar-brand {
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: xx-large;
+    text-shadow: 2px 2px 8px #b4b1ff;
+}
+.no-bullets {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  }
 .orange {
     background-color: orange;
 }
@@ -16,8 +74,20 @@ input {
     background-color: red;
     color: white;
 }
+.searchBar {
+    background-color: #e5e4ff;
+    font-family: 'Fredoka One', cursive;
+    color:  #b4b1ff;
+    text-shadow: 1px 1px 3px #f9e4ff;
+}
+.searchContain {
+    width: 100%;
+}
 span {
     padding: 3px;
+}
+.weather {
+    float: left;
 }
 .yellow {
     background-color: yellow;

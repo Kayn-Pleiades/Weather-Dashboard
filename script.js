@@ -28,7 +28,7 @@ function renderHistory() {
         var search = searchHistory[i];
         var code = `
             <li> 
-                <button type="submit" class="btn"> ${search} </button>
+                <button type="submit" class="btn rounded-circle cities mb-1"> ${search} </button>
             </li>
         `;
         $("ul").prepend(code);
@@ -100,7 +100,7 @@ function coord(lat,lon){
         $("#humidity").text("Humidity:   " + response.current.humidity + " %");
         $("#windSpeed").text("Wind Speed:   " + response.current.wind_speed + " MPH");
         $("#UVIndex").html(`UV Index:  <span class="rounded-pill">${response.current.uvi}</span>`);
-        $("#currentWeather").find("img").attr("src", `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@2x.png`);
+        $("#currentWeather").find("img").attr("src", `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@4x.png`);
 
         for ( i = 1; i < 6; i++) {
             var key = $("#" + i);
@@ -112,11 +112,11 @@ function coord(lat,lon){
             var year = f.getFullYear();
             var printDate = month + "/" + day + "/" + year;
             var code = `
-                <div class="card">
-                    <h3>${printDate}</h3>
+                <div class="card rounded">
+                    <h3 class="text-center">${printDate}</h3>
                     <img src="http://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@4x.png">
-                    <p>Temperature:   ${response.daily[i].temp.day} °F</p>
-                    <p>Humidity:   ${response.daily[i].humidity}</p>
+                    <p class="text-center">Temperature:   ${response.daily[i].temp.day} °F</p>
+                    <p class="text-center">Humidity:   ${response.daily[i].humidity}</p>
                 </div>
             `;
             key.html(code);

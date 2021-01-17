@@ -83,9 +83,14 @@ Current date displays, accounting for time difference (aka if it's evening here 
 ### Commit 23: Forecast Dates
 Forecast dates now also display! With this, all needed functionality is present. I'll put some work in on making it look better though. 
 
+### Commit 24: Decorating
+made everything look much more cute!
+
 ## credits
 https://getbootstrap.com/docs/5.0
 https://www.epa.gov/sunsafety/uv-index-scale-0
 https://stackoverflow.com/questions/847185/convert-a-unix-timestamp-to-time-in-javascript
 https://stackoverflow.com/questions/11591854/format-date-to-mm-dd-yyyy-in-javascript
 https://openweathermap.org/
+https://www.w3schools.com/howto/howto_css_list_without_bullets.asp
+https://www.color-hex.com/color-palette/25844
