@@ -1,5 +1,6 @@
 # Weather-Dashboard
 
+Project is deployed here: https://kayn-pleiades.github.io/Weather-Dashboard/
 
 ## Table of Contents
 
@@ -8,6 +9,8 @@
 * [Credits](#credits)
 
 ## description 
+
+This webpage allows you to check both the future and current weather of cities around the world! Past searches are stored so that you can easily access them when needed. The UV index also changes color in regards to the danger presented by UV rays. Hopefully it will keep you from forgetting your sunscreen!
 
 ## process
 
@@ -76,6 +79,9 @@ Now when you click a past search or re-search an existing value, it moves that c
 
 ### Commit 22: Current Date
 Current date displays, accounting for time difference (aka if it's evening here and we search tokyo, the date will show tomorrow, as it is tomorrow there). This is how all weather apps I've used have handled timezones.
+
+### Commit 23: Forecast Dates
+Forecast dates now also display! With this, all needed functionality is present. I'll put some work in on making it look better though. 
 
 ## credits
 https://getbootstrap.com/docs/5.0

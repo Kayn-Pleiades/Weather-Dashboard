@@ -8,7 +8,9 @@ function init() {
     var storedSearches = JSON.parse(localStorage.getItem("searchHistory"));
     if (storedSearches !== null) {
         searchHistory = storedSearches;
-        console.log(searchHistory);
+    }
+    else if (storedSearches == null) {
+        return;
     }
     renderHistory();
     var last = searchHistory[searchHistory.length - 1];
@@ -86,8 +88,6 @@ function coord(lat,lon){
         method: "GET"
       }).then(function(response) {
 
-        console.log(response);
-
         var offset = response.timezone_offset;
         var accounted = response.current.dt + offset
         var d = new Date(accounted * 1000);
@@ -102,12 +102,19 @@ function coord(lat,lon){
         $("#UVIndex").html(`UV Index:  <span class="rounded-pill">${response.current.uvi}</span>`);
         $("#currentWeather").find("img").attr("src", `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@2x.png`);
 
-        for ( i = 0; i < 5; i++) {
+        for ( i = 1; i < 6; i++) {
             var key = $("#" + i);
+            var offset = response.timezone_offset;
+            var futuredate = response.daily[i].dt + offset
+            var f = new Date(futuredate * 1000);
+            var month = f.getMonth() + 1; 
+            var day = f.getDate();      
+            var year = f.getFullYear();
+            var printDate = month + "/" + day + "/" + year;
             var code = `
                 <div class="card">
-                    <h1></h1>
-                    <img src="http://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@2x.png">
+                    <h3>${printDate}</h3>
+                    <img src="http://openweathermap.org/img/wn/${response.daily[i].weather[0].icon}@4x.png">
                     <p>Temperature:   ${response.daily[i].temp.day} °F</p>
                     <p>Humidity:   ${response.daily[i].humidity}</p>
                 </div>
